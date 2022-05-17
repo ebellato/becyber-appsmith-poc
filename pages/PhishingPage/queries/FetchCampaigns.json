@@ -17,7 +17,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Phishing",
+    "pageId": "PhishingPage",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -58,7 +58,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Phishing_FetchCampaigns",
+  "id": "PhishingPage_FetchCampaigns",
   "deleted": false,
   "gitSyncId": "627e0b96782bd05e6e4709a6_627e0bcc782bd05e6e4709b9"
 }

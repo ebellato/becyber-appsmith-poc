@@ -2,17 +2,17 @@
   "clientSchemaVersion": 1,
   "serverSchemaVersion": 4,
   "pageOrder": [
-    "Phishing",
-    "Page2"
+    "PhishingPage",
+    "SmishingPage"
   ],
   "publishedPageOrder": [
-    "Phishing",
-    "Page2"
+    "PhishingPage",
+    "SmishingPage"
   ],
-  "publishedDefaultPageName": "Phishing",
-  "unpublishedDefaultPageName": "Phishing",
+  "publishedDefaultPageName": "PhishingPage",
+  "unpublishedDefaultPageName": "PhishingPage",
   "invisibleActionFields": {
-    "Phishing_FetchCampaigns": {
+    "PhishingPage_FetchCampaigns": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }

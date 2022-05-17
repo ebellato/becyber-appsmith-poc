@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Phishing",
-    "slug": "phishing",
+    "name": "PhishingPage",
+    "slug": "phishingpage",
     "layouts": [
       {
         "viewMode": false,
@@ -65,7 +65,7 @@
                   "key": "primaryColumns.name.computedValue"
                 }
               ],
-              "leftColumn": 4,
+              "leftColumn": 22,
               "primaryColumns": {
                 "status": {
                   "index": 2,
@@ -141,7 +141,7 @@
               "delimiter": ",",
               "key": "1v5wmwfmlv",
               "derivedColumns": {},
-              "rightColumn": 61,
+              "rightColumn": 64,
               "textSize": "PARAGRAPH",
               "widgetId": "8w82jooh67",
               "isVisibleFilters": true,
@@ -164,13 +164,69 @@
                 "step": 90,
                 "status": 75
               }
+            },
+            {
+              "isCompact": false,
+              "widgetName": "MenuButton1",
+              "displayName": "Menu Button",
+              "iconSVG": "/static/media/icon.0341d17d.svg",
+              "topRow": 10,
+              "bottomRow": 14,
+              "parentRowSpace": 10,
+              "type": "MENU_BUTTON_WIDGET",
+              "hideCard": false,
+              "animateLoading": true,
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "menuItems.menuItem2.onClick"
+                },
+                {
+                  "key": "menuItems.menuItem1.onClick"
+                }
+              ],
+              "leftColumn": 6,
+              "dynamicBindingPathList": [],
+              "isDisabled": false,
+              "key": "kf8ezay5ai",
+              "rightColumn": 22,
+              "menuVariant": "PRIMARY",
+              "widgetId": "6vtpyxt807",
+              "menuItems": {
+                "menuItem1": {
+                  "label": "Phishing",
+                  "id": "menuItem1",
+                  "widgetId": "",
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "index": 0,
+                  "onClick": "{{navigateTo('PhishingPage', {})}}"
+                },
+                "menuItem2": {
+                  "label": "Smishing",
+                  "id": "menuItem2",
+                  "widgetId": "",
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "index": 1,
+                  "onClick": "{{navigateTo('SmishingPage', {})}}"
+                }
+              },
+              "isVisible": true,
+              "label": "Open Menu",
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "menuColor": "#03B365",
+              "placement": "CENTER"
             }
           ]
         },
         "layoutOnLoadActions": [
           [
             {
-              "id": "Phishing_FetchCampaigns",
+              "id": "PhishingPage_FetchCampaigns",
               "name": "FetchCampaigns",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -183,10 +239,11 @@
         ],
         "widgetNames": [
           "CampaignsListTable",
-          "MainContainer"
+          "MainContainer",
+          "MenuButton1"
         ],
         "validOnPageLoadActions": true,
-        "id": "Phishing",
+        "id": "PhishingPage",
         "deleted": false,
         "policies": [],
         "userPermissions": []
