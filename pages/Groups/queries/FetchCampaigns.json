@@ -17,7 +17,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "PhishingPage",
+    "pageId": "Groups",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -41,7 +41,7 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -58,7 +58,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "PhishingPage_FetchCampaigns",
+  "id": "Groups_FetchCampaigns",
   "deleted": false,
-  "gitSyncId": "627e0b96782bd05e6e4709a6_627e0bcc782bd05e6e4709b9"
+  "gitSyncId": "627e0b96782bd05e6e4709a6_6286141f309fd93a9bf191d0"
 }

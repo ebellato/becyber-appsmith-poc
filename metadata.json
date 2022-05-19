@@ -3,34 +3,29 @@
   "serverSchemaVersion": 4,
   "pageOrder": [
     "PhishingPage",
-    "SmishingPage"
+    "SmishingPage",
+    "Groups"
   ],
   "publishedPageOrder": [
     "PhishingPage",
-    "SmishingPage"
+    "SmishingPage",
+    "Groups"
   ],
   "publishedDefaultPageName": "PhishingPage",
   "unpublishedDefaultPageName": "PhishingPage",
   "invisibleActionFields": {
+    "Groups_FetchCampaigns": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Groups_FetchGroups": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
     "PhishingPage_FetchCampaigns": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
-  },
-  "publishedTheme": {
-    "name": "Classic",
-    "displayName": "Classic",
-    "isSystemTheme": true,
-    "deleted": false,
-    "policies": [
-      {
-        "permission": "read:themes",
-        "users": [
-          "anonymousUser"
-        ],
-        "groups": []
-      }
-    ]
   },
   "publishedLayoutmongoEscapedWidgets": {},
   "unpublishedLayoutmongoEscapedWidgets": {},
