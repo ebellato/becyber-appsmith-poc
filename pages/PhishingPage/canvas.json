@@ -30,9 +30,9 @@
               "widgetName": "CampaignsListTable",
               "defaultPageSize": 0,
               "columnOrder": [
+                "name",
                 "status",
-                "launch_date",
-                "name"
+                "launch_date"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -102,8 +102,8 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "launch_date",
-                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.launch_date))}}",
+                  "label": "Data di lancio",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( new Date(currentRow.launch_date).toLocaleDateString()))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
                 },
@@ -121,7 +121,7 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "name",
+                  "label": "Nome",
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
