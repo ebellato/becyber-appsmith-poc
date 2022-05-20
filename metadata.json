@@ -3,26 +3,28 @@
   "serverSchemaVersion": 4,
   "pageOrder": [
     "PhishingPage",
-    "SmishingPage",
-    "Groups"
+    "Groups",
+    "Users",
+    "Page1"
   ],
   "publishedPageOrder": [
     "PhishingPage",
-    "SmishingPage",
-    "Groups"
+    "Groups",
+    "Users",
+    "Page1"
   ],
   "publishedDefaultPageName": "PhishingPage",
   "unpublishedDefaultPageName": "PhishingPage",
   "invisibleActionFields": {
-    "Groups_FetchCampaigns": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
     "Groups_FetchGroups": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
     "PhishingPage_FetchCampaigns": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Users_FetchUsers": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     }
