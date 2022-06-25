@@ -30,9 +30,10 @@
               "widgetName": "CampaignsListTable",
               "defaultPageSize": 0,
               "columnOrder": [
+                "id",
                 "name",
-                "status",
-                "launch_date"
+                "launch_date",
+                "status"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -63,6 +64,9 @@
                 },
                 {
                   "key": "accentColor"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
                 }
               ],
               "leftColumn": 1,
@@ -125,6 +129,25 @@
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
+                },
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": ""
                 }
               },
               "delimiter": ",",
@@ -136,7 +159,7 @@
               "widgetId": "8w82jooh67",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
-              "tableData": "{{FetchCampaigns.data.data.phishingCampaignList}}",
+              "tableData": "{{FetchCampaigns.data.data.phishingcampaigns}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -183,9 +206,7 @@
               "name": "FetchCampaigns",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery PhishingCampaignList {\n\t\t\t\tphishingCampaignList {\n\t\t\t\t\tstatus\n\t\t\t\t\tlaunch_date\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

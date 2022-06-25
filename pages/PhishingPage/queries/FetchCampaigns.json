@@ -6,10 +6,8 @@
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
-      "organizationId": "627e0951782bd05e6e4708cf",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "https://hgvtb54b0f.execute-api.eu-central-1.amazonaws.com"
+        "url": "https://d5cykamia8.execute-api.eu-central-1.amazonaws.com"
       },
       "invalids": [],
       "messages": [],
@@ -22,6 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
+      "path": "/graphql",
       "headers": [
         {
           "key": "content-type",
@@ -30,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery PhishingCampaignList {\n\t\t\t\tphishingCampaignList {\n\t\t\t\t\tstatus\n\t\t\t\t\tlaunch_date\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})\n}}",
+      "body": "{\n  \"query\": \"{\n    phishingcampaigns {\n      id\n      launch_date\n      name\n      status\n    }\n  }\"\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
@@ -43,17 +42,11 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "JSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery PhishingCampaignList {\n\t\t\t\tphishingCampaignList {\n\t\t\t\t\tstatus\n\t\t\t\t\tlaunch_date\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1292,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -30,7 +30,10 @@
               "widgetName": "CampaignsListTable",
               "defaultPageSize": 0,
               "columnOrder": [
-                "name"
+                "email",
+                "first_name",
+                "last_name",
+                "job_title"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -51,21 +54,31 @@
                   "key": "tableData"
                 },
                 {
-                  "key": "primaryColumns.name.computedValue"
+                  "key": "accentColor"
                 },
                 {
-                  "key": "accentColor"
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.first_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.job_title.computedValue"
+                },
+                {
+                  "key": "primaryColumns.last_name.computedValue"
                 }
               ],
               "leftColumn": 1,
               "primaryColumns": {
-                "name": {
-                  "index": 4,
+                "email": {
+                  "index": 0,
                   "width": 150,
-                  "id": "name",
+                  "id": "email",
                   "horizontalAlignment": "CENTER",
                   "verticalAlignment": "CENTER",
                   "columnType": "text",
+                  "textColor": "",
                   "textSize": "0.875rem",
                   "enableFilter": true,
                   "enableSort": true,
@@ -73,10 +86,66 @@
                   "isDisabled": false,
                   "isCellVisible": true,
                   "isDerived": false,
-                  "label": "name",
-                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
-                  "borderRadius": "0px",
-                  "boxShadow": "none"
+                  "label": "Email",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                  "cellBackground": ""
+                },
+                "first_name": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "first_name",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Nome",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.first_name))}}",
+                  "cellBackground": ""
+                },
+                "job_title": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "job_title",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Posizione",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.job_title))}}",
+                  "cellBackground": ""
+                },
+                "last_name": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "last_name",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "Cognome",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.last_name))}}",
+                  "cellBackground": ""
                 }
               },
               "delimiter": ",",
@@ -88,7 +157,7 @@
               "widgetId": "8w82jooh67",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
-              "tableData": "{{FetchUsers.data.data.groupList}}",
+              "tableData": "{{FetchUsers.data.data.phishingusers}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -135,9 +204,7 @@
               "name": "FetchUsers",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery GroupList {\n\t\t\t\tgroupList {\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
