@@ -97,10 +97,6 @@
           ]
         },
         "layoutOnLoadActions": [],
-        "widgetNames": [
-          "Chart1",
-          "MainContainer"
-        ],
         "validOnPageLoadActions": true,
         "id": "Page1",
         "deleted": false,
@@ -112,6 +108,5 @@
     "policies": []
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "627e0b96782bd05e6e4709a6_628768b47901344ba8d11057"
 }

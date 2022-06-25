@@ -142,10 +142,6 @@
             }
           ]
         ],
-        "widgetNames": [
-          "CampaignsListTable",
-          "MainContainer"
-        ],
         "validOnPageLoadActions": true,
         "id": "Users",
         "deleted": false,
@@ -158,6 +154,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "627e0b96782bd05e6e4709a6_6287685f7901344ba8d11023"
 }

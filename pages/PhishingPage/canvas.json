@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1292,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -190,10 +190,6 @@
             }
           ]
         ],
-        "widgetNames": [
-          "CampaignsListTable",
-          "MainContainer"
-        ],
         "validOnPageLoadActions": true,
         "id": "PhishingPage",
         "deleted": false,
@@ -206,6 +202,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "627e0b96782bd05e6e4709a6_627e0b96782bd05e6e4709a8"
 }

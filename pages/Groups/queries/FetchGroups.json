@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://hgvtb54b0f.execute-api.eu-central-1.amazonaws.com"
+        "url": "https://d5cykamia8.execute-api.eu-central-1.amazonaws.com"
       },
       "invalids": [],
       "messages": [],
@@ -20,6 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
+      "path": "/graphql",
       "headers": [
         {
           "key": "content-type",
@@ -28,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nJSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery GroupList {\n\t\t\t\tgroupList {\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})\n}}",
+      "body": "{\n  \"query\": \"{\n    phishinggroups {\n      id\n      name\n    }\n  }\"\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
@@ -41,17 +42,11 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "JSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery GroupList {\n\t\t\t\tgroupList {\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

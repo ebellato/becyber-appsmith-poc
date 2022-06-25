@@ -1,35 +1,5 @@
 {
   "clientSchemaVersion": 1,
-  "serverSchemaVersion": 4,
-  "pageOrder": [
-    "PhishingPage",
-    "Groups",
-    "Users",
-    "Page1"
-  ],
-  "publishedPageOrder": [
-    "PhishingPage",
-    "Groups",
-    "Users",
-    "Page1"
-  ],
-  "publishedDefaultPageName": "PhishingPage",
-  "unpublishedDefaultPageName": "PhishingPage",
-  "invisibleActionFields": {
-    "Groups_FetchGroups": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "PhishingPage_FetchCampaigns": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    },
-    "Users_FetchUsers": {
-      "unpublishedUserSetOnLoad": false,
-      "publishedUserSetOnLoad": false
-    }
-  },
-  "publishedLayoutmongoEscapedWidgets": {},
-  "unpublishedLayoutmongoEscapedWidgets": {},
+  "serverSchemaVersion": 5,
   "fileFormatVersion": 2
 }

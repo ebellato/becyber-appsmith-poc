@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 1292,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -30,6 +30,7 @@
               "widgetName": "CampaignsListTable",
               "defaultPageSize": 0,
               "columnOrder": [
+                "id",
                 "name"
               ],
               "isVisibleDownload": true,
@@ -55,6 +56,9 @@
                 },
                 {
                   "key": "accentColor"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
                 }
               ],
               "leftColumn": 1,
@@ -77,6 +81,25 @@
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
+                },
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": ""
                 }
               },
               "delimiter": ",",
@@ -88,7 +111,7 @@
               "widgetId": "8w82jooh67",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisibleFilters": true,
-              "tableData": "{{FetchGroups.data.data.groupList}}",
+              "tableData": "{{FetchGroups.data.data.phishinggroups}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -135,16 +158,10 @@
               "name": "FetchGroups",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [
-                "JSON.stringify({\n    variables: null,\n    query: `\n\t\t\tquery GroupList {\n\t\t\t\tgroupList {\n\t\t\t\t\tname\n\t\t\t\t}\n\t\t\t}\n    `\n})"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
-        ],
-        "widgetNames": [
-          "CampaignsListTable",
-          "MainContainer"
         ],
         "validOnPageLoadActions": true,
         "id": "Groups",
@@ -158,6 +175,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "627e0b96782bd05e6e4709a6_6286141f309fd93a9bf191ce"
 }

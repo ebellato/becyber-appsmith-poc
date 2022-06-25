@@ -6,6 +6,7 @@
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
+      "organizationId": "627e0951782bd05e6e4708cf",
       "datasourceConfiguration": {
         "url": "https://hgvtb54b0f.execute-api.eu-central-1.amazonaws.com"
       },
