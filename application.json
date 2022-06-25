@@ -5,11 +5,11 @@
       "isDefault": true
     },
     {
-      "id": "Groups",
+      "id": "PhishingGroups",
       "isDefault": false
     },
     {
-      "id": "Users",
+      "id": "PhishingUsers",
       "isDefault": false
     },
     {

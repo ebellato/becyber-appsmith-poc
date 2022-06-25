@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Groups",
-    "slug": "groups",
+    "name": "PhishingGroups",
+    "slug": "phishinggroups",
     "layouts": [
       {
         "viewMode": false,
@@ -31,7 +31,8 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "id",
-                "name"
+                "name",
+                "source"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -59,6 +60,9 @@
                 },
                 {
                   "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.source.computedValue"
                 }
               ],
               "leftColumn": 1,
@@ -99,6 +103,25 @@
                   "isDerived": false,
                   "label": "id",
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": ""
+                },
+                "source": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "source",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "source",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.source.name))}}",
                   "cellBackground": ""
                 }
               },
@@ -154,7 +177,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Groups_FetchGroups",
+              "id": "PhishingGroups_FetchGroups",
               "name": "FetchGroups",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -164,7 +187,7 @@
           ]
         ],
         "validOnPageLoadActions": true,
-        "id": "Groups",
+        "id": "PhishingGroups",
         "deleted": false,
         "policies": [],
         "userPermissions": []

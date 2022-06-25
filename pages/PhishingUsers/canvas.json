@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Users",
-    "slug": "users",
+    "name": "PhishingUsers",
+    "slug": "phishingusers",
     "layouts": [
       {
         "viewMode": false,
@@ -32,8 +32,9 @@
               "columnOrder": [
                 "email",
                 "first_name",
+                "job_title",
                 "last_name",
-                "job_title"
+                "source"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -67,6 +68,9 @@
                 },
                 {
                   "key": "primaryColumns.last_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.source.computedValue"
                 }
               ],
               "leftColumn": 1,
@@ -146,6 +150,25 @@
                   "label": "Cognome",
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.last_name))}}",
                   "cellBackground": ""
+                },
+                "source": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "source",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "source",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.source.name))}}",
+                  "cellBackground": ""
                 }
               },
               "delimiter": ",",
@@ -200,7 +223,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Users_FetchUsers",
+              "id": "PhishingUsers_FetchUsers",
               "name": "FetchUsers",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -210,7 +233,7 @@
           ]
         ],
         "validOnPageLoadActions": true,
-        "id": "Users",
+        "id": "PhishingUsers",
         "deleted": false,
         "policies": [],
         "userPermissions": []

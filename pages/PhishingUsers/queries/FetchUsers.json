@@ -2,7 +2,7 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "FetchGroups",
+    "name": "FetchUsers",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Groups",
+    "pageId": "PhishingUsers",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n  \"query\": \"{\n    phishinggroups {\n      id\n      name\n    }\n  }\"\n}",
+      "body": "{\n  \"query\": \"{\n    phishingusers {\n      email\n      first_name\n      job_title\n      last_name\n\t    source {\n      \tname\n    \t}\n    }\n  }\"\n}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "pluginSpecifiedTemplates": [
@@ -52,7 +52,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Groups_FetchGroups",
+  "id": "PhishingUsers_FetchUsers",
   "deleted": false,
-  "gitSyncId": "627e0b96782bd05e6e4709a6_62861434309fd93a9bf191e2"
+  "gitSyncId": "627e0b96782bd05e6e4709a6_6287685f7901344ba8d11026"
 }

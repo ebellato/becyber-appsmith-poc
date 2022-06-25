@@ -31,9 +31,10 @@
               "defaultPageSize": 0,
               "columnOrder": [
                 "id",
-                "name",
                 "launch_date",
-                "status"
+                "name",
+                "status",
+                "source"
               ],
               "isVisibleDownload": true,
               "dynamicPropertyPathList": [],
@@ -67,6 +68,9 @@
                 },
                 {
                   "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.source.computedValue"
                 }
               ],
               "leftColumn": 1,
@@ -147,6 +151,25 @@
                   "isDerived": false,
                   "label": "id",
                   "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "cellBackground": ""
+                },
+                "source": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "source",
+                  "horizontalAlignment": "CENTER",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textColor": "",
+                  "textSize": "0.875rem",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "source",
+                  "computedValue": "{{CampaignsListTable.sanitizedTableData.map((currentRow) => ( currentRow.source.name))}}",
                   "cellBackground": ""
                 }
               },
